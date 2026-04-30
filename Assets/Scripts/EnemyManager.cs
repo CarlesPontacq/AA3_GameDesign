@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,23 +11,31 @@ public class EnemyManager : MonoBehaviour
 
     [Header("Enemy Settings")]
     [SerializeField] float stepDistance = 1f;
-    [SerializeField] float timeBetweenSteps = 1f;
     [SerializeField] DirectionUtils.Direction initialDirection = DirectionUtils.Direction.Right;
+
+    [Header("Spawn")]
+    [SerializeField] float spawnDelay = 0.1f;
+
+    [Header("Movement")]
+    [SerializeField] float delayBetweenEnemies = 0.05f;
 
     List<EnemyMovement> enemies = new List<EnemyMovement>();
 
     void Start()
     {
-        Spawn();
+        StartCoroutine(GameRoutine());
     }
 
-    void Update()
+    IEnumerator GameRoutine()
     {
-        float dt = Time.deltaTime;
-        UpdateEnemies(dt);
+        yield return StartCoroutine(SpawnRoutine());
+
+        yield return new WaitForSeconds(0.5f);
+
+        StartCoroutine(MovementRoutine());
     }
 
-    void Spawn()
+    IEnumerator SpawnRoutine()
     {
         enemies.Clear();
 
@@ -48,19 +57,37 @@ public class EnemyManager : MonoBehaviour
                 var enemy = obj.GetComponent<EnemyMovement>();
                 if (enemy != null)
                 {
-                    enemy.Initialize(stepDistance, timeBetweenSteps, initialDirection);
+                    enemy.Initialize(stepDistance, initialDirection);
                     enemies.Add(enemy);
                 }
+
+                yield return new WaitForSeconds(spawnDelay);
             }
         }
     }
 
-    void UpdateEnemies(float dt)
+    IEnumerator MovementRoutine()
     {
-        for (int i = 0; i < enemies.Count; i++)
+        int index = 0;
+
+        while (true)
         {
-            if (enemies[i] != null)
-                enemies[i].Tick(dt);
+            if (enemies.Count == 0)
+            {
+                yield return null;
+                continue;
+            }
+
+            if (enemies[index] != null)
+            {
+                enemies[index].Step();
+            }
+
+            index++;
+            if (index >= enemies.Count)
+                index = 0;
+
+            yield return new WaitForSeconds(delayBetweenEnemies);
         }
     }
 

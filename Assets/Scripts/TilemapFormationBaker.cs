@@ -30,6 +30,8 @@ public class TilemapFormationBaker : MonoBehaviour
 
         CleanMappings();
 
+        tilemap.CompressBounds();
+
         BoundsInt bounds = tilemap.cellBounds;
 
         output.width = bounds.size.x;
@@ -51,13 +53,14 @@ public class TilemapFormationBaker : MonoBehaviour
             );
 
             int index = local.x + local.y * output.width;
+
             if (index >= 0 && index < output.grid.Length)
             {
                 output.grid[index] = type;
             }
         }
 
-        Debug.Log("Formation baked correctamente");
+        Debug.Log($"Formation baked: {output.width}x{output.height}");
     }
 
     void CleanMappings()

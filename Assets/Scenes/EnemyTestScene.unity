@@ -285,12 +285,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66ac149b0a78eae46b4b1f150f3d8ef5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  formation: {fileID: 11400000, guid: d6f6516914a848f4393927489c3eedcc, type: 2}
+  formation: {fileID: 11400000, guid: 10d5e6d184bb19c459a2d6e5b17f5ac1, type: 2}
   startPosition: {x: 0, y: 0}
   cellSize: 1
   stepDistance: 0.0625
-  timeBetweenSteps: 0.5
   initialDirection: 1
+  spawnDelay: 0.01
+  delayBetweenEnemies: 0.05
 --- !u!4 &959887071
 Transform:
   m_ObjectHideFlags: 0
