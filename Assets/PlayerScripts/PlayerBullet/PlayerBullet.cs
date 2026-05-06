@@ -3,12 +3,14 @@ using UnityEngine;
 
 public class PlayerBullet : MonoBehaviour
 {
-    [Header("Basic Sttings")]
+    [Header("Basic Settings")]
     [SerializeField] private float destroyTime;
     [SerializeField] private float speed = 6f;
 
     [Header("Collision")]
-    [SerializeField] private string objectiveTag = "Enemy";
+    private const string objectiveTag = "Enemy";
+    private const string stationTag = "Station";
+    private const string playerTag = "Player";
     
     void Start()
     {
@@ -22,10 +24,22 @@ public class PlayerBullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        //Comprobación de si tiene el componente para quitarle vida o ver si es el tipo de medicina que se necesita
-        if (other.tag == objectiveTag)
+        if (other.tag == playerTag) return;
+
+        switch (other.tag)
         {
-            Destroy(gameObject);
+            case objectiveTag:
+                Debug.Log(objectiveTag);
+                break;
+
+            case stationTag:
+                Debug.Log(stationTag);
+                break;
+
+            default:
+                break;
         }
+        
+        Destroy(gameObject);
     }
 }
