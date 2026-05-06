@@ -1,9 +1,11 @@
 using System;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class EnemyMovement : MonoBehaviour
 {
     [SerializeField] float stepDistance;
+    [SerializeField] GameObject deathEffectPrefab;
 
     [SerializeField] SpriteRenderer spriteRenderer;
     [SerializeField] Sprite sprite1;
@@ -38,6 +40,7 @@ public class EnemyMovement : MonoBehaviour
 
     public void Die()
     {
+        Instantiate(deathEffectPrefab, transform.position, Quaternion.identity);
         OnDeath?.Invoke(this);
         Destroy(gameObject);
     }
