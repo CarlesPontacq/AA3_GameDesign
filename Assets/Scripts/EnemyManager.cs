@@ -22,8 +22,6 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] float dropDistance = 1f;
 
     List<EnemyMovement> enemies = new List<EnemyMovement>();
-
-    bool justChangedDirection = false;
     
     Coroutine hitStopCoroutine;
 
@@ -80,20 +78,6 @@ public class EnemyManager : MonoBehaviour
                 continue;
             }
 
-            if (IsAtScreenEdge(out var newDir))
-            {
-                if (!justChangedDirection)
-                {
-                    SetDirectionAll(newDir);
-                    MoveDown(dropDistance);
-                    justChangedDirection = true;
-                }
-            }
-            else
-            {
-                justChangedDirection = false;
-            }
-
             var currentWave = new List<EnemyMovement>(enemies);
 
             for (int i = 0; i < currentWave.Count; i++)
@@ -104,6 +88,12 @@ public class EnemyManager : MonoBehaviour
                 enemy.Step();
 
                 yield return new WaitForSeconds(delayBetweenEnemies);
+            }
+
+            if (IsAtScreenEdge(out var newDir))
+            {
+                yield return StartCoroutine(MoveDiagonalRoutine(newDir, dropDistance));
+                SetDirectionAll(newDir);
             }
         }
     }
@@ -136,10 +126,13 @@ public class EnemyManager : MonoBehaviour
 
         foreach (var enemy in enemies)
         {
-            float x = enemy.transform.position.x;
+            var bounds = enemy.GetComponent<SpriteRenderer>().bounds;
 
-            if (x < leftMost) leftMost = x;
-            if (x > rightMost) rightMost = x;
+            float left = bounds.min.x;
+            float right = bounds.max.x;
+
+            if (left < leftMost) leftMost = left;
+            if (right > rightMost) rightMost = right;
         }
 
         float screenLeft = Camera.main.ViewportToWorldPoint(Vector3.zero).x;
@@ -160,11 +153,22 @@ public class EnemyManager : MonoBehaviour
         return false;
     }
 
-    void MoveDown(float amount)
+    IEnumerator MoveDiagonalRoutine(DirectionUtils.Direction dir, float downAmount)
     {
-        foreach (var enemy in enemies)
+        Vector2 horizontal = DirectionUtils.ToVector2(dir) * stepDistance;
+        Vector2 vertical = Vector2.down * downAmount;
+        Vector2 total = horizontal + vertical;
+
+        var currentWave = new List<EnemyMovement>(enemies);
+
+        for (int i = 0; i < currentWave.Count; i++)
         {
-            enemy.transform.position += Vector3.down * amount;
+            var enemy = currentWave[i];
+            if (enemy == null) continue;
+
+            enemy.transform.position += (Vector3)total;
+
+            yield return new WaitForSeconds(delayBetweenEnemies);
         }
     }
 

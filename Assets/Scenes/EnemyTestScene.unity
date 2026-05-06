@@ -290,10 +290,10 @@ MonoBehaviour:
   cellSize: 1
   stepDistance: 0.0625
   initialDirection: 1
-  hitStopDuration: 0.75
+  hitStopDuration: 0.25
   spawnDelay: 0.01
-  delayBetweenEnemies: 0.05
-  dropDistance: 1
+  delayBetweenEnemies: 0.00835
+  dropDistance: 0.6
 --- !u!4 &959887071
 Transform:
   m_ObjectHideFlags: 0
