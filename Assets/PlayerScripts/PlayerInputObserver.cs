@@ -20,6 +20,12 @@ public class PlayerInputObserver : MonoBehaviour
         movement = new Vector2(Mathf.RoundToInt(movement.x), Mathf.RoundToInt(movement.y));
     }
 
+    public void OnAttack(InputAction.CallbackContext context)
+    {
+        if (context.phase == InputActionPhase.Started)
+            onAttack?.Invoke();
+    }
+
     public void SwitchActionMap(ActionMap actionMap)
     {
         playerInputRef.SwitchCurrentActionMap(GetActionMapString(actionMap));

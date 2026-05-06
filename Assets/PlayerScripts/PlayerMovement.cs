@@ -12,16 +12,10 @@ public class PlayerMovement : MonoBehaviour
 
     public bool IsMoving { get; private set; }
 
-    void Start()
-    {
-        
-    }
-
     private void FixedUpdate()
     {
         Move();
         UpdatePublicVariables();
-
     }
 
     private void Move()
