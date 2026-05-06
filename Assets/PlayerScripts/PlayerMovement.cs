@@ -28,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector2 inputMovementDir = inputObserver.movement.normalized;
 
-        Vector3 realMovementDir = bodyRef.right * inputMovementDir.x;
+        Vector3 realMovementDir = bodyRef.right * inputMovementDir.x * Time.deltaTime;
         realMovementDir.y = 0f;
 
         if (realMovementDir.sqrMagnitude > minMovementMagnitude)
@@ -37,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
         Vector3 velocity = Vector3.zero;
         velocity.x = realMovementDir.x;
 
-        rigidbodyRef.linearVelocity = velocity;
+        rigidbodyRef.linearVelocity = velocity * walkingSpeed;
     }
 
     private void UpdatePublicVariables()
