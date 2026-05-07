@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 6745948847036868358}
   - component: {fileID: 8081191970976741250}
   - component: {fileID: 4115096314329234681}
-  - component: {fileID: 5369033658233778419}
   - component: {fileID: 1457486743586417057}
   m_Layer: 0
   m_Name: Enemy
@@ -107,18 +106,6 @@ MonoBehaviour:
   spriteRenderer: {fileID: 8081191970976741250}
   sprite1: {fileID: 0}
   sprite2: {fileID: 0}
---- !u!114 &5369033658233778419
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7858844631460583377}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f064f2a555f3ac24f899f507536c9080, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &1457486743586417057
 BoxCollider2D:
   m_ObjectHideFlags: 0
