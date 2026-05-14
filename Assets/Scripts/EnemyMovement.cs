@@ -44,4 +44,13 @@ public class EnemyMovement : MonoBehaviour
         OnDeath?.Invoke(this);
         Destroy(gameObject);
     }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("PlayerBullet"))
+        {
+            Die();
+            Destroy(other.gameObject);
+        }
+    }
 }
