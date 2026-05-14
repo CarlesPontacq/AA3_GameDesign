@@ -13,6 +13,7 @@ public class EnemyMovement : MonoBehaviour
 
     Vector2 movementVector;
     bool useSprite1 = true;
+    public int Column { get; private set; }
 
     public event Action<EnemyMovement> OnDeath;
 
@@ -31,6 +32,11 @@ public class EnemyMovement : MonoBehaviour
 
         useSprite1 = !useSprite1;
         spriteRenderer.sprite = useSprite1 ? sprite1 : sprite2;
+    }
+
+    public void SetColumn(int column)
+    {
+        Column = column;
     }
 
     public void SetDirection(DirectionUtils.Direction dir)

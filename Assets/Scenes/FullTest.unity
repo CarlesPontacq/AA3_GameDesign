@@ -72787,6 +72787,8 @@ MonoBehaviour:
   spawnDelay: 0.01
   delayBetweenEnemies: 0.00835
   dropDistance: 0.6
+  enemyBulletPrefab: {fileID: 7710389310943382142, guid: bb06ee4b3e5d2724b8f1458c9cbbae3b, type: 3}
+  attackRate: 1
 --- !u!4 &1870338255
 Transform:
   m_ObjectHideFlags: 0

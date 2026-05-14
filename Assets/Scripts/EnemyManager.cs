@@ -21,6 +21,12 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] float delayBetweenEnemies = 0.05f;
     [SerializeField] float dropDistance = 1f;
 
+    [Header("Attack")]
+    [SerializeField] GameObject enemyBulletPrefab;
+    [SerializeField] float attackRate = 1f;
+
+    float attackTimer;
+
     List<EnemyMovement> enemies = new List<EnemyMovement>();
     
     Coroutine hitStopCoroutine;
@@ -28,6 +34,17 @@ public class EnemyManager : MonoBehaviour
     void Start()
     {
         StartCoroutine(GameRoutine());
+    }
+
+    void Update()
+    {
+        attackTimer += Time.deltaTime;
+
+        if (attackTimer >= attackRate)
+        {
+            attackTimer = 0f;
+            Shoot();
+        }
     }
 
     IEnumerator GameRoutine()
@@ -52,11 +69,13 @@ public class EnemyManager : MonoBehaviour
                 Vector2 pos = origin + new Vector2(x * cellSize, y * cellSize);
 
                 GameObject obj = Instantiate(type.prefab, pos, Quaternion.identity);
-
                 var enemy = obj.GetComponent<EnemyMovement>();
+
                 if (enemy != null)
                 {
                     enemy.Initialize(stepDistance, initialDirection);
+                    
+                    enemy.SetColumn(x);
 
                     enemy.OnDeath += HandleEnemyDeath;
 
@@ -187,5 +206,53 @@ public class EnemyManager : MonoBehaviour
                 (formation.width - 1) * cellSize * 0.5f,
                 (formation.height - 1) * cellSize * 0.5f
             );
+    }
+
+    void Shoot()
+    {
+        EnemyMovement shooter = GetBottomEnemy();
+
+        if (shooter == null)
+            return;
+
+        Instantiate(
+            enemyBulletPrefab,
+            shooter.transform.position,
+            Quaternion.identity
+        );
+    }
+
+    EnemyMovement GetBottomEnemy()
+    {
+        Dictionary<int, EnemyMovement> bottomEnemies =
+            new Dictionary<int, EnemyMovement>();
+
+        foreach (var enemy in enemies)
+        {
+            if (enemy == null)
+                continue;
+
+            int column = enemy.Column;
+
+            if (!bottomEnemies.ContainsKey(column))
+            {
+                bottomEnemies[column] = enemy;
+                continue;
+            }
+
+            if (enemy.transform.position.y <
+                bottomEnemies[column].transform.position.y)
+            {
+                bottomEnemies[column] = enemy;
+            }
+        }
+
+        if (bottomEnemies.Count == 0)
+            return null;
+
+        List<EnemyMovement> candidates =
+            new List<EnemyMovement>(bottomEnemies.Values);
+
+        return candidates[Random.Range(0, candidates.Count)];
     }
 }
