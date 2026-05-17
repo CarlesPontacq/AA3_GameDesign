@@ -12,6 +12,7 @@ public class PlayerInputObserver : MonoBehaviour
     public bool IsPressingAttack { get; private set; } = false;
 
     public Action onAttack;
+    public Action onChangeCure;
     public Action onPause;
 
     public void OnMove(InputAction.CallbackContext context)
@@ -24,6 +25,12 @@ public class PlayerInputObserver : MonoBehaviour
     {
         if (context.phase == InputActionPhase.Started)
             onAttack?.Invoke();
+    }
+
+    public void OnChangeCure(InputAction.CallbackContext context)
+    {
+        if (context.phase == InputActionPhase.Started)
+            onChangeCure?.Invoke();
     }
 
     public void SwitchActionMap(ActionMap actionMap)

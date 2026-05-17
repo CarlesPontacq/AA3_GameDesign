@@ -122,7 +122,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destroyTime: 5
   speed: 10
-  objectiveTag: Enemy
+  spriteRenderer: {fileID: 5795899614535239352}
+  cureType: 0
+  cure1Color: {r: 1, g: 1, b: 1, a: 1}
+  cure2Color: {r: 1, g: 0, b: 0, a: 1}
+  cure3Color: {r: 0, g: 1, b: 0, a: 1}
+  cure4Color: {r: 0, g: 0, b: 1, a: 1}
 --- !u!212 &5795899614535239352
 SpriteRenderer:
   m_ObjectHideFlags: 0
