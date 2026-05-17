@@ -9,7 +9,7 @@ public class StationBlock : MonoBehaviour
             StationDestroyer bunker = GetComponentInParent<StationDestroyer>();
             if (bunker != null)
             {
-                bunker.BlockDestroyed(transform);
+                //bunker.BlockDestroyed(transform);
             }
 
             Destroy(other.gameObject);

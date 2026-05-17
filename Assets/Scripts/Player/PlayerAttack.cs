@@ -5,6 +5,7 @@ public class PlayerAttack : MonoBehaviour
     [Header("Projectile")]
     [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private Transform shootPoint;
+    [SerializeField] private CureType currentCureType;
 
     [Header("Attack")]
     [SerializeField] private float fireRate = 0.3f;
@@ -14,10 +15,12 @@ public class PlayerAttack : MonoBehaviour
 
     private float timer;
     private bool canAttack = false;
+    private CureSwitcherArea cureSwitcherArea;
 
     private void Start()
     {
         input.onAttack += Shoot;
+        input.onChangeCure += OnChangeCureInput;
     }
 
     void Update()
@@ -30,12 +33,25 @@ public class PlayerAttack : MonoBehaviour
         }
     }
 
+    private void OnChangeCureInput()
+    {
+        if (cureSwitcherArea != null)
+            cureSwitcherArea.TryChangeCure();
+        Debug.Log("Change cure key pressed" + currentCureType.ToString());
+    }
+
     private void Shoot()
     {
         if(canAttack)
         {
-            Instantiate(projectilePrefab, shootPoint.transform.position, shootPoint.transform.rotation);
+            GameObject bullet = Instantiate(projectilePrefab, shootPoint.transform.position, shootPoint.transform.rotation);
+
+            bullet.GetComponent<PlayerBullet>().SetCureType(currentCureType);
+
             canAttack = false;
         }
     }
+
+    public void SetCurrentCureType(CureType newtCureType) { currentCureType = newtCureType; }
+    public void SetCureSwitchArea(CureSwitcherArea newCureSwitchArea) { cureSwitcherArea = newCureSwitchArea; }
 }
