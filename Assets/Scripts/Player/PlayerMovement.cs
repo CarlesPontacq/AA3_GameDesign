@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private Rigidbody rigidbodyRef;
+    [SerializeField] private Rigidbody2D rigidbodyRef;
     [SerializeField] private Transform bodyRef;
     [SerializeField] private PlayerInputObserver inputObserver;
     [SerializeField] private float walkingSpeed;

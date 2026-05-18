@@ -12,7 +12,7 @@ public class StationBlock : MonoBehaviour
                 bunker.BlockDestroyed(transform);
             }
 
-            Destroy(other.gameObject);
+            Destroy(other);
         }
     }
 }

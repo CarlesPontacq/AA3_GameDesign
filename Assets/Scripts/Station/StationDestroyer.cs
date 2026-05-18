@@ -1,129 +1,78 @@
+using NUnit.Framework;
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class StationDestroyer : MonoBehaviour
 {
-    [Header("Station Size")]
-    public int width = 7;
-    public int height = 5;     
-
-    [Header("Prefabs")]
-    public GameObject blockPrefab;
-
-    [Header("Blocks")]
-    public float blockSize = 0.11f;
-
     [Header("Destruction")]
-    public int destroyRadius = 2;
+    public float destroyRadius = 2;
+    [SerializeField] private GameObject[] blocks;
 
-    private GameObject[,] blocks;
+    [Header("Timer")]
+    public float respawnTime = 3f;
+    private float timer;
 
-    void Start()
+    private class DeactivatedBlockInfo
     {
-        GenerateBunker();
+        public GameObject block;
+        public float deactivationTime;
+
+        public DeactivatedBlockInfo(GameObject block, float time)
+        {
+            this.block = block;
+            this.deactivationTime = time;
+        }
     }
 
-    void GenerateBunker()
+    private List<DeactivatedBlockInfo> deactivatedBlocks = new List<DeactivatedBlockInfo>();
+
+    void Update()
     {
-        blocks = new GameObject[width, height];
+        float currentTime = Time.time;
 
-        int[,] shape = GetBunkerShape();
-
-        for (int x = 0; x < width; x++)
+        for (int i = deactivatedBlocks.Count - 1; i >= 0; i--)
         {
-            for (int y = 0; y < height; y++)
+            DeactivatedBlockInfo info = deactivatedBlocks[i];
+
+            if (currentTime - info.deactivationTime >= respawnTime)
             {
-                if (shape[x, y] == 1)
+                if (info.block != null)
                 {
-                    Vector3 blockPos = transform.position + new Vector3(
-                        (x - (width - 1) / 2f) * blockSize,
-                        y * blockSize,
-                        0
-                    );
-
-                    GameObject block = Instantiate(blockPrefab, blockPos, Quaternion.identity);
-                    block.transform.parent = transform;
-
-                    block.transform.localScale = Vector3.one * blockSize;
-
-                    blocks[x, y] = block;
+                    info.block.SetActive(true);
                 }
+
+                deactivatedBlocks.RemoveAt(i);
             }
         }
     }
 
-    int[,] GetBunkerShape()
+    internal void BlockDestroyed(Transform transform)
     {
-        int[,] shape = new int[width, height];
-
-        for (int x = 0; x < width; x++)
-        {
-            for (int y = 0; y < height; y++)
+        foreach (var block in blocks) 
+        { 
+            if(Vector3.Distance(block.transform.position, transform.position)  < destroyRadius)
             {
-                float nx = (x - (width - 1) / 2f) / (width / 2f);
-                float ny = y / (float)height;
-
-                float shapeHeight = 1 - (nx * nx) * 1.2f;
-
-                if (ny < shapeHeight && ny > 0.1f)
+                if (block.activeSelf)
                 {
-                    shape[x, y] = 1;
-                }
-                else
-                {
-                    shape[x, y] = 0;
-                }
-            }
-        }
+                    block.SetActive(false);
 
-        return shape;
-    }
-
-    public void BlockDestroyed(Transform destroyedBlock)
-    {
-        Vector2Int coords = GetBlockCoordinates(destroyedBlock);
-
-        if (coords.x == -1) return;
-
-        for (int x = -destroyRadius; x <= destroyRadius; x++)
-        {
-            for (int y = -destroyRadius; y <= destroyRadius; y++)
-            {
-                int targetX = coords.x + x;
-                int targetY = coords.y + y;
-
-                if (targetX >= 0 && targetX < width && targetY >= 0 && targetY < height)
-                {
-                    if (blocks[targetX, targetY] != null)
+                    bool alreadyInList = false;
+                    foreach (var info in deactivatedBlocks)
                     {
-                        Destroy(blocks[targetX, targetY]);
-                        blocks[targetX, targetY] = null;
+                        if (info.block == block)
+                        {
+                            alreadyInList = true;
+                            break;
+                        }
+                    }
+
+                    if (!alreadyInList)
+                    {
+                        deactivatedBlocks.Add(new DeactivatedBlockInfo(block, Time.time));
                     }
                 }
             }
         }
-    }
-
-    Vector2Int GetBlockCoordinates(Transform block)
-    {
-        for (int x = 0; x < width; x++)
-        {
-            for (int y = 0; y < height; y++)
-            {
-                if (blocks[x, y] != null && blocks[x, y].transform == block)
-                {
-                    return new Vector2Int(x, y);
-                }
-            }
-        }
-        return new Vector2Int(-1, -1);
-    }
-
-    void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.yellow;
-        float totalWidth = width * blockSize;
-        float totalHeight = height * blockSize;
-        Vector3 center = transform.position + new Vector3(0, totalHeight / 2f, 0);
-        Gizmos.DrawWireCube(center, new Vector3(totalWidth, totalHeight, 0));
     }
 }
