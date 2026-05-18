@@ -1,11 +1,11 @@
 using UnityEngine;
 public class EnemyClickKillTest : MonoBehaviour
 {
-    EnemyMovement enemy;
+    Enemy enemy;
 
     void Awake()
     {
-        enemy = GetComponent<EnemyMovement>();
+        enemy = GetComponent<Enemy>();
     }
 
     void OnMouseDown()

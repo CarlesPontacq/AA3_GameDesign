@@ -27,7 +27,7 @@ public class EnemyManager : MonoBehaviour
 
     float attackTimer;
 
-    List<EnemyMovement> enemies = new List<EnemyMovement>();
+    List<Enemy> enemies = new List<Enemy>();
     
     Coroutine hitStopCoroutine;
 
@@ -69,7 +69,7 @@ public class EnemyManager : MonoBehaviour
                 Vector2 pos = origin + new Vector2(x * cellSize, y * cellSize);
 
                 GameObject obj = Instantiate(type.prefab, pos, Quaternion.identity);
-                var enemy = obj.GetComponent<EnemyMovement>();
+                var enemy = obj.GetComponent<Enemy>();
 
                 if (enemy != null)
                 {
@@ -97,7 +97,7 @@ public class EnemyManager : MonoBehaviour
                 continue;
             }
 
-            var currentWave = new List<EnemyMovement>(enemies);
+            var currentWave = new List<Enemy>(enemies);
 
             for (int i = 0; i < currentWave.Count; i++)
             {
@@ -117,7 +117,7 @@ public class EnemyManager : MonoBehaviour
         }
     }
 
-    void HandleEnemyDeath(EnemyMovement enemy)
+    void HandleEnemyDeath(Enemy enemy)
     {
         enemies.Remove(enemy);
 
@@ -178,7 +178,7 @@ public class EnemyManager : MonoBehaviour
         Vector2 vertical = Vector2.down * downAmount;
         Vector2 total = horizontal + vertical;
 
-        var currentWave = new List<EnemyMovement>(enemies);
+        var currentWave = new List<Enemy>(enemies);
 
         for (int i = 0; i < currentWave.Count; i++)
         {
@@ -210,22 +210,18 @@ public class EnemyManager : MonoBehaviour
 
     void Shoot()
     {
-        EnemyMovement shooter = GetBottomEnemy();
+        Enemy shooter = GetBottomEnemy();
 
         if (shooter == null)
             return;
 
-        Instantiate(
-            enemyBulletPrefab,
-            shooter.transform.position,
-            Quaternion.identity
-        );
+        shooter.Shoot(enemyBulletPrefab);
     }
 
-    EnemyMovement GetBottomEnemy()
+    Enemy GetBottomEnemy()
     {
-        Dictionary<int, EnemyMovement> bottomEnemies =
-            new Dictionary<int, EnemyMovement>();
+        Dictionary<int, Enemy> bottomEnemies =
+            new Dictionary<int, Enemy>();
 
         foreach (var enemy in enemies)
         {
@@ -250,8 +246,8 @@ public class EnemyManager : MonoBehaviour
         if (bottomEnemies.Count == 0)
             return null;
 
-        List<EnemyMovement> candidates =
-            new List<EnemyMovement>(bottomEnemies.Values);
+        List<Enemy> candidates =
+            new List<Enemy>(bottomEnemies.Values);
 
         return candidates[Random.Range(0, candidates.Count)];
     }

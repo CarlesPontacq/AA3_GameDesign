@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class EnemyMovement : MonoBehaviour
+public class Enemy : MonoBehaviour
 {
     [SerializeField] float stepDistance;
     [SerializeField] GameObject deathEffectPrefab;
@@ -11,11 +11,13 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] Sprite sprite1;
     [SerializeField] Sprite sprite2;
 
+    [SerializeField] Transform shootPoint;
+
     Vector2 movementVector;
     bool useSprite1 = true;
     public int Column { get; private set; }
 
-    public event Action<EnemyMovement> OnDeath;
+    public event Action<Enemy> OnDeath;
 
     public void Initialize(float stepDist, DirectionUtils.Direction dir)
     {
@@ -49,6 +51,15 @@ public class EnemyMovement : MonoBehaviour
         Instantiate(deathEffectPrefab, transform.position, Quaternion.identity);
         OnDeath?.Invoke(this);
         Destroy(gameObject);
+    }
+
+    public void Shoot(GameObject bullet)
+    {
+        Instantiate(
+            bullet,
+            shootPoint.transform.position,
+            Quaternion.identity
+        );
     }
 
     void OnTriggerEnter2D(Collider2D other)
