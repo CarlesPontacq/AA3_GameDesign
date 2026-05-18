@@ -45,6 +45,11 @@ public class PlayerBullet : MonoBehaviour
         SetupAppearance();
     }
 
+    public CureType GetCureType()
+    {
+        return cureType;
+    }
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == playerTag || other.tag == changeCureArea) return;

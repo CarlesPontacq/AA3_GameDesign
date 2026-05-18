@@ -4,6 +4,8 @@ using UnityEngine.UIElements;
 
 public class Enemy : MonoBehaviour
 {
+    [SerializeField] CureType weakness;
+
     [SerializeField] float stepDistance;
     [SerializeField] GameObject deathEffectPrefab;
 
@@ -66,8 +68,13 @@ public class Enemy : MonoBehaviour
     {
         if (other.CompareTag("PlayerBullet"))
         {
-            Die();
-            Destroy(other.gameObject);
+            CureType cureType = other.GetComponent<PlayerBullet>().GetCureType();
+            Debug.Log("Enemigo con weakness " + weakness + " recibe medicina " + cureType);
+            if (weakness == CureType.ANY || weakness == cureType)
+            {
+                Die();
+                Destroy(other.gameObject);
+            } 
         }
     }
 }
