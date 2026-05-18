@@ -21,13 +21,30 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] float delayBetweenEnemies = 0.05f;
     [SerializeField] float dropDistance = 1f;
 
-    List<EnemyMovement> enemies = new List<EnemyMovement>();
+    [Header("Attack")]
+    [SerializeField] GameObject enemyBulletPrefab;
+    [SerializeField] float attackRate = 1f;
+
+    float attackTimer;
+
+    List<Enemy> enemies = new List<Enemy>();
     
     Coroutine hitStopCoroutine;
 
     void Start()
     {
         StartCoroutine(GameRoutine());
+    }
+
+    void Update()
+    {
+        attackTimer += Time.deltaTime;
+
+        if (attackTimer >= attackRate)
+        {
+            attackTimer = 0f;
+            Shoot();
+        }
     }
 
     IEnumerator GameRoutine()
@@ -52,11 +69,13 @@ public class EnemyManager : MonoBehaviour
                 Vector2 pos = origin + new Vector2(x * cellSize, y * cellSize);
 
                 GameObject obj = Instantiate(type.prefab, pos, Quaternion.identity);
+                var enemy = obj.GetComponent<Enemy>();
 
-                var enemy = obj.GetComponent<EnemyMovement>();
                 if (enemy != null)
                 {
                     enemy.Initialize(stepDistance, initialDirection);
+                    
+                    enemy.SetColumn(x);
 
                     enemy.OnDeath += HandleEnemyDeath;
 
@@ -78,7 +97,7 @@ public class EnemyManager : MonoBehaviour
                 continue;
             }
 
-            var currentWave = new List<EnemyMovement>(enemies);
+            var currentWave = new List<Enemy>(enemies);
 
             for (int i = 0; i < currentWave.Count; i++)
             {
@@ -98,7 +117,7 @@ public class EnemyManager : MonoBehaviour
         }
     }
 
-    void HandleEnemyDeath(EnemyMovement enemy)
+    void HandleEnemyDeath(Enemy enemy)
     {
         enemies.Remove(enemy);
 
@@ -159,7 +178,7 @@ public class EnemyManager : MonoBehaviour
         Vector2 vertical = Vector2.down * downAmount;
         Vector2 total = horizontal + vertical;
 
-        var currentWave = new List<EnemyMovement>(enemies);
+        var currentWave = new List<Enemy>(enemies);
 
         for (int i = 0; i < currentWave.Count; i++)
         {
@@ -187,5 +206,49 @@ public class EnemyManager : MonoBehaviour
                 (formation.width - 1) * cellSize * 0.5f,
                 (formation.height - 1) * cellSize * 0.5f
             );
+    }
+
+    void Shoot()
+    {
+        Enemy shooter = GetBottomEnemy();
+
+        if (shooter == null)
+            return;
+
+        shooter.Shoot(enemyBulletPrefab);
+    }
+
+    Enemy GetBottomEnemy()
+    {
+        Dictionary<int, Enemy> bottomEnemies =
+            new Dictionary<int, Enemy>();
+
+        foreach (var enemy in enemies)
+        {
+            if (enemy == null)
+                continue;
+
+            int column = enemy.Column;
+
+            if (!bottomEnemies.ContainsKey(column))
+            {
+                bottomEnemies[column] = enemy;
+                continue;
+            }
+
+            if (enemy.transform.position.y <
+                bottomEnemies[column].transform.position.y)
+            {
+                bottomEnemies[column] = enemy;
+            }
+        }
+
+        if (bottomEnemies.Count == 0)
+            return null;
+
+        List<Enemy> candidates =
+            new List<Enemy>(bottomEnemies.Values);
+
+        return candidates[Random.Range(0, candidates.Count)];
     }
 }

@@ -3,10 +3,6 @@ using UnityEngine;
 
 public class PlayerBullet : MonoBehaviour
 {
-    [Header("Basic Settings")]
-    [SerializeField] private float destroyTime;
-    [SerializeField] private float speed = 6f;
-
     [Header("Cure Settings")]
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private CureType cureType;
@@ -21,7 +17,6 @@ public class PlayerBullet : MonoBehaviour
     
     void Start()
     {
-        Destroy(gameObject, destroyTime);
         SetupAppearance();
     }
 
@@ -50,9 +45,9 @@ public class PlayerBullet : MonoBehaviour
         SetupAppearance();
     }
 
-    void Update()
+    public CureType GetCureType()
     {
-        transform.position += (Vector3.up * speed * Time.deltaTime);
+        return cureType;
     }
 
     void OnTriggerEnter2D(Collider2D other)

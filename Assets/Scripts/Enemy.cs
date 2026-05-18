@@ -2,8 +2,10 @@ using System;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class EnemyMovement : MonoBehaviour
+public class Enemy : MonoBehaviour
 {
+    [SerializeField] CureType weakness;
+
     [SerializeField] float stepDistance;
     [SerializeField] GameObject deathEffectPrefab;
 
@@ -11,10 +13,13 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] Sprite sprite1;
     [SerializeField] Sprite sprite2;
 
+    [SerializeField] Transform shootPoint;
+
     Vector2 movementVector;
     bool useSprite1 = true;
+    public int Column { get; private set; }
 
-    public event Action<EnemyMovement> OnDeath;
+    public event Action<Enemy> OnDeath;
 
     public void Initialize(float stepDist, DirectionUtils.Direction dir)
     {
@@ -33,6 +38,11 @@ public class EnemyMovement : MonoBehaviour
         spriteRenderer.sprite = useSprite1 ? sprite1 : sprite2;
     }
 
+    public void SetColumn(int column)
+    {
+        Column = column;
+    }
+
     public void SetDirection(DirectionUtils.Direction dir)
     {
         movementVector = DirectionUtils.ToVector2(dir);
@@ -45,12 +55,26 @@ public class EnemyMovement : MonoBehaviour
         Destroy(gameObject);
     }
 
+    public void Shoot(GameObject bullet)
+    {
+        Instantiate(
+            bullet,
+            shootPoint.transform.position,
+            Quaternion.identity
+        );
+    }
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("PlayerBullet"))
         {
-            Die();
-            Destroy(other.gameObject);
+            CureType cureType = other.GetComponent<PlayerBullet>().GetCureType();
+            Debug.Log("Enemigo con weakness " + weakness + " recibe medicina " + cureType);
+            if (weakness == CureType.ANY || weakness == cureType)
+            {
+                Die();
+                Destroy(other.gameObject);
+            } 
         }
     }
 }
