@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class CureSwitcherArea : MonoBehaviour
@@ -7,6 +8,8 @@ public class CureSwitcherArea : MonoBehaviour
     [SerializeField] private SpriteRenderer[] areaVisual;
     [SerializeField] private Color activeColor = Color.white;
     [SerializeField] private Color inactiveColor = Color.gray;
+
+    [SerializeField] private TextMeshPro key;
 
     private PlayerAttack currentPlayerInArea;
 
@@ -34,6 +37,8 @@ public class CureSwitcherArea : MonoBehaviour
                     areaVisual[i].color = activeColor;
             }
 
+            key.gameObject.SetActive(true);
+
             Debug.Log($"Player entered {stationCureType} area");
         }
     }
@@ -50,6 +55,8 @@ public class CureSwitcherArea : MonoBehaviour
                 for (int i = 0; i < areaVisual.Length; i++)
                     areaVisual[i].color = inactiveColor;
             }
+
+            key.gameObject.SetActive(false);
 
             Debug.Log($"Player exited {stationCureType} area");
         }
