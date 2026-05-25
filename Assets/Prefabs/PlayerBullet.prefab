@@ -123,10 +123,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 1129236852541931949}
   cureType: 0
-  cure1Color: {r: 1, g: 1, b: 1, a: 1}
+  cure1Color: {r: 0.6953268, g: 0, b: 1, a: 1}
   cure2Color: {r: 1, g: 0, b: 0, a: 1}
   cure3Color: {r: 0, g: 1, b: 0, a: 1}
-  cure4Color: {r: 0, g: 0, b: 1, a: 1}
+  cure4Color: {r: 0, g: 0.8832197, b: 1, a: 1}
 --- !u!212 &1129236852541931949
 SpriteRenderer:
   m_ObjectHideFlags: 0

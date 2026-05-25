@@ -34,7 +34,7 @@ PrefabInstance:
       objectReference: {fileID: 1961183383047197949, guid: 8a960dcc30c270e4caed1d828ef40d68, type: 3}
     - target: {fileID: 4115096314329234681, guid: 94a6939a1660fa241be0ce6ab3ea57fd, type: 3}
       propertyPath: weakness
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6745948847036868358, guid: 94a6939a1660fa241be0ce6ab3ea57fd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -86,15 +86,15 @@ PrefabInstance:
       objectReference: {fileID: 876784968147787122, guid: 8a960dcc30c270e4caed1d828ef40d68, type: 3}
     - target: {fileID: 8081191970976741250, guid: 94a6939a1660fa241be0ce6ab3ea57fd, type: 3}
       propertyPath: m_Color.b
-      value: 0.5019608
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8081191970976741250, guid: 94a6939a1660fa241be0ce6ab3ea57fd, type: 3}
       propertyPath: m_Color.g
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8081191970976741250, guid: 94a6939a1660fa241be0ce6ab3ea57fd, type: 3}
       propertyPath: m_Color.r
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
