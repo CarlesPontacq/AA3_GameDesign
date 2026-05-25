@@ -11,7 +11,6 @@ public class StationDestroyer : MonoBehaviour
 
     [Header("Timer")]
     public float respawnTime = 3f;
-    private float timer;
 
     private class DeactivatedBlockInfo
     {
@@ -29,22 +28,22 @@ public class StationDestroyer : MonoBehaviour
 
     void Update()
     {
-        float currentTime = Time.time;
+        //float currentTime = Time.time;
 
-        for (int i = deactivatedBlocks.Count - 1; i >= 0; i--)
-        {
-            DeactivatedBlockInfo info = deactivatedBlocks[i];
+        //for (int i = deactivatedBlocks.Count - 1; i >= 0; i--)
+        //{
+        //    DeactivatedBlockInfo info = deactivatedBlocks[i];
 
-            if (currentTime - info.deactivationTime >= respawnTime)
-            {
-                if (info.block != null)
-                {
-                    info.block.SetActive(true);
-                }
+        //    if (currentTime - info.deactivationTime >= respawnTime)
+        //    {
+        //        if (info.block != null)
+        //        {
+        //            info.block.SetActive(true);
+        //        }
 
-                deactivatedBlocks.RemoveAt(i);
-            }
-        }
+        //        deactivatedBlocks.RemoveAt(i);
+        //    }
+        //}
     }
 
     internal void BlockDestroyed(Transform transform)
@@ -57,20 +56,20 @@ public class StationDestroyer : MonoBehaviour
                 {
                     block.SetActive(false);
 
-                    bool alreadyInList = false;
-                    foreach (var info in deactivatedBlocks)
-                    {
-                        if (info.block == block)
-                        {
-                            alreadyInList = true;
-                            break;
-                        }
-                    }
+                    //bool alreadyInList = false;
+                    //foreach (var info in deactivatedBlocks)
+                    //{
+                    //    if (info.block == block)
+                    //    {
+                    //        alreadyInList = true;
+                    //        break;
+                    //    }
+                    //}
 
-                    if (!alreadyInList)
-                    {
-                        deactivatedBlocks.Add(new DeactivatedBlockInfo(block, Time.time));
-                    }
+                    //if (!alreadyInList)
+                    //{
+                    //    deactivatedBlocks.Add(new DeactivatedBlockInfo(block, Time.time));
+                    //}
                 }
             }
         }
