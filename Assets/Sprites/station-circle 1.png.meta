@@ -1,0 +1,1868 @@
+fileFormatVersion: 2
+guid: 06fe90282d306044b8bd0e96a9359a28
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1797324783723964186
+    second: station-circle_0
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 22
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: station-circle 1_0
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 22
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86c969c96a3cf1849a646fd88498daa4
+      internalID: 128900219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_1
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 22
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7f2c357b46f691479e6289da26e8956
+      internalID: -805715722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_2
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 22
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a001da15f21c1943bbe2ca454fa5ad6
+      internalID: -2096232054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_3
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 22
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f86c9fc06b57edc4e902f6abea443e9c
+      internalID: 1833866509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_4
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 22
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b60306341433a5a4db33c77cca2cddf8
+      internalID: 649531203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_5
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 22
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c62442d918b54d54da1faf1e000ad026
+      internalID: -1700640412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_6
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 21
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb222a3cc6e6070479e326e25e18e463
+      internalID: -413758191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_7
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 21
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6aa52a5919501c43b74ef19e2399756
+      internalID: -1671310946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_8
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 21
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60c85298e38b4f44f84ea4720b573af2
+      internalID: 896421379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_9
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 21
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22a11692d7a285c4cb8cccb96ca52fcb
+      internalID: -304263491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_10
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 21
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6058ca994e7888c4d9f58aa905750ba1
+      internalID: 1301255139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_11
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 21
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a348dbc4ab15f5b4b83b0ebd0f3f3362
+      internalID: -21279305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_12
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 20
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc1d6499906b6044f81ee5f6601d704f
+      internalID: -1442775616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_13
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 20
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41a4d0bfa2234954d96ea2dcf2ca4fa7
+      internalID: 1123573472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_14
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 20
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5c5288ba28b96d439e9b38e7d54b32b
+      internalID: -783057303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_15
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 20
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6c48cfea13760f4887231ba6f47a7bc
+      internalID: 588393343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_16
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 20
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 194c8016ee4a6924dad8a652677df6f6
+      internalID: -1295434492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_17
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 20
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09005f38b2c36da42969238330d426d1
+      internalID: 532132298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_18
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 19
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a1d1c3bd779588438d308f60ad4518c
+      internalID: 1888915652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_19
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 19
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01650b5245509ff40b54fdb2bd5d9ea4
+      internalID: 1418191343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_20
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 19
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b420b18f91102e3409fd93cd2426001f
+      internalID: 69601332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_21
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 19
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5bfaa3656f65294b96d91702550c3a5
+      internalID: 502622233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_22
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 18
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0986f61c1c176af498c2b56bb73b3053
+      internalID: 779738943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_23
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 18
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21575f20ad2e1144eb006c97a445d22a
+      internalID: -337720516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_24
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 17
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad8628a95f247814ea2078b55ffd62d0
+      internalID: -1668199196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_25
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 17
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa578eb5ab762ac4b9b37e90781df14c
+      internalID: 887803649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_26
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 17
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf4428a47b0b7734a8c1c94f53c1295e
+      internalID: -1251382577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_27
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 17
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b081f7fc4aa63e343908a95535891029
+      internalID: -1371657249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_28
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 16
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fefdd27f0b8ffec478eff2c4b56ac809
+      internalID: 1834629739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_29
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 16
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a1a15f2c421af94880af4e62e4a99bc
+      internalID: 1767809355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_30
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 15
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f966dfb7acab9e4895009e9c4dedde9
+      internalID: -717430888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_31
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 15
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ea806576ead6db46912941375b69622
+      internalID: 1824397681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_32
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 15
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 098d2000806d977438bc4ace4e05435d
+      internalID: -94135333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_33
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 15
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 452647c1a7366224b9e0747ce708e6e4
+      internalID: 1735229031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_34
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 14
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d1cad6fd6b17b44384bdeeb7865c3e9
+      internalID: 1041603290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_35
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 14
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acde50ba4ad88764ea760bd5b4f9891d
+      internalID: -748806325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_36
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 13
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66299fa2d8cceed43b11f7e2d53bc026
+      internalID: -1073343559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_37
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 13
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40989457882d04843ac4de177496a17d
+      internalID: 63653284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_38
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 12
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9dad8f65832f4c4baa9ce59dd10e24b
+      internalID: 176627131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_39
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 12
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cba54990fe7d2948b4771f5e2605721
+      internalID: 1004242226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_40
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 11
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a82da782ac996094f98114c5a2bf26e0
+      internalID: 1105189345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_41
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 11
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b7e6418b94d2c8478e3fb6f39737508
+      internalID: -1953320578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_42
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 10
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cb3eabaca524b64a89114321defe017
+      internalID: 1307852065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_43
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 10
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5cf36a9aa5eb1449ada7f3da6d66abe
+      internalID: -1071441605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_44
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 10
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0aae49359e93527438f107fe60b4bbc8
+      internalID: -2100180040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_45
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 10
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e30d4210d38c3694cbe40e8dd254feff
+      internalID: -1586734678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_46
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 9
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0659362e7a7c1e94886d5d398c37e7bf
+      internalID: 1780742719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_47
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 9
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2ba05107f51a944389f4c983c9f875a
+      internalID: -849098600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_48
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 8
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00cb42c2edd218f4986f8f0f47464791
+      internalID: 141786231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_49
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 8
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9449ab326e2c96a4a8f97ebdcdcd8e8c
+      internalID: -174288187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_50
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 8
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e620f30c41e6a74393d1707824ab7f5
+      internalID: -1587201266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_51
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 8
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38e7c19f2ee915e44b4002c171513ae2
+      internalID: -507791578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_52
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 7
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fce05a167befa34491ddbee4768e69b
+      internalID: 92123421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_53
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 7
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d28fe1de1742bf74793a79437509e4e4
+      internalID: -622608812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_54
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 6
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8396edd7d3e74a54cb11a67f206f39b6
+      internalID: -478305669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_55
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 6
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5091805c0b542641aa0397be9fb4f90
+      internalID: 1508199013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_56
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 6
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44c63c8010fd3d54583e1ab928bdaa8a
+      internalID: 1323185638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_57
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 6
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65bcf9ef944e84a4da8507041b76d5c4
+      internalID: 1116356607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_58
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 5
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbb74af69b6665844b79be87aa2b64fb
+      internalID: 1575883822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_59
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 5
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 708435059697efb46a38a37a5434b6af
+      internalID: 1977723385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_60
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 5
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b77a4fe9634f7846b815130517d8425
+      internalID: 289239750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_61
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 5
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e4f122a1cd7d1c479a76aa85ae447f2
+      internalID: -1856525856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_62
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 5
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbf76b2b5653f6e459dc6d11ccd23d63
+      internalID: 133063127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_63
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 5
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b44ea742ced44bc4f921f3f30ca3f12d
+      internalID: -1089990216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_64
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 4
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfac723161f1f61448ee17d5bbacf9b6
+      internalID: -1270786779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_65
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 4
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a8c9c9eb9afe174380e1e70b73e96f0
+      internalID: 1916818182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_66
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 4
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75487511d12552b4bbdd1fa69256055a
+      internalID: -1588065112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_67
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 4
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a603d4863d61754c8d03849a6e65d35
+      internalID: 353174932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_68
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 4
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b67dfff29d4f694cb8ca99c04518cf6
+      internalID: -1063939724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_69
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 4
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b9b4c328aa157a48b876580eda4d85b
+      internalID: 419539486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_70
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 3
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c9f7dd6661d62a4ba7eae98b8214b29
+      internalID: 62763201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_71
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 3
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdb290d333851e544bd4281cadde0087
+      internalID: -1622680802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_72
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 3
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a43fd4e1bf96af4e824e167b08a103f
+      internalID: 942838129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_73
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 3
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45fd609dcd8b59b47bd2d6554e004761
+      internalID: 1055530151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_74
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 3
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae399b6f5f4775e4ab4b51552f820044
+      internalID: -2011417937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: station-circle 1_75
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 3
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ea658063363082468286d08ee67fb3c
+      internalID: -506101229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 6a3bda82ce832c44ea8caf21ba42df77
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      station-circle 1_0: 128900219
+      station-circle 1_1: -805715722
+      station-circle 1_10: 1301255139
+      station-circle 1_11: -21279305
+      station-circle 1_12: -1442775616
+      station-circle 1_13: 1123573472
+      station-circle 1_14: -783057303
+      station-circle 1_15: 588393343
+      station-circle 1_16: -1295434492
+      station-circle 1_17: 532132298
+      station-circle 1_18: 1888915652
+      station-circle 1_19: 1418191343
+      station-circle 1_2: -2096232054
+      station-circle 1_20: 69601332
+      station-circle 1_21: 502622233
+      station-circle 1_22: 779738943
+      station-circle 1_23: -337720516
+      station-circle 1_24: -1668199196
+      station-circle 1_25: 887803649
+      station-circle 1_26: -1251382577
+      station-circle 1_27: -1371657249
+      station-circle 1_28: 1834629739
+      station-circle 1_29: 1767809355
+      station-circle 1_3: 1833866509
+      station-circle 1_30: -717430888
+      station-circle 1_31: 1824397681
+      station-circle 1_32: -94135333
+      station-circle 1_33: 1735229031
+      station-circle 1_34: 1041603290
+      station-circle 1_35: -748806325
+      station-circle 1_36: -1073343559
+      station-circle 1_37: 63653284
+      station-circle 1_38: 176627131
+      station-circle 1_39: 1004242226
+      station-circle 1_4: 649531203
+      station-circle 1_40: 1105189345
+      station-circle 1_41: -1953320578
+      station-circle 1_42: 1307852065
+      station-circle 1_43: -1071441605
+      station-circle 1_44: -2100180040
+      station-circle 1_45: -1586734678
+      station-circle 1_46: 1780742719
+      station-circle 1_47: -849098600
+      station-circle 1_48: 141786231
+      station-circle 1_49: -174288187
+      station-circle 1_5: -1700640412
+      station-circle 1_50: -1587201266
+      station-circle 1_51: -507791578
+      station-circle 1_52: 92123421
+      station-circle 1_53: -622608812
+      station-circle 1_54: -478305669
+      station-circle 1_55: 1508199013
+      station-circle 1_56: 1323185638
+      station-circle 1_57: 1116356607
+      station-circle 1_58: 1575883822
+      station-circle 1_59: 1977723385
+      station-circle 1_6: -413758191
+      station-circle 1_60: 289239750
+      station-circle 1_61: -1856525856
+      station-circle 1_62: 133063127
+      station-circle 1_63: -1089990216
+      station-circle 1_64: -1270786779
+      station-circle 1_65: 1916818182
+      station-circle 1_66: -1588065112
+      station-circle 1_67: 353174932
+      station-circle 1_68: -1063939724
+      station-circle 1_69: 419539486
+      station-circle 1_7: -1671310946
+      station-circle 1_70: 62763201
+      station-circle 1_71: -1622680802
+      station-circle 1_72: 942838129
+      station-circle 1_73: 1055530151
+      station-circle 1_74: -2011417937
+      station-circle 1_75: -506101229
+      station-circle 1_8: 896421379
+      station-circle 1_9: -304263491
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
