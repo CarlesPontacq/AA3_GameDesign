@@ -856,6 +856,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stationCureType: 0
   areaVisual:
+  - {fileID: 8259072915412392183}
   - {fileID: 5104334015748305510}
   - {fileID: 5687869634517678136}
   - {fileID: 744075737661341084}
@@ -935,7 +936,6 @@ MonoBehaviour:
   - {fileID: 401838525356801521}
   - {fileID: 8109262232020232431}
   - {fileID: 5734179058393564859}
-  - {fileID: 8259072915412392183}
   activeColor: {r: 1, g: 1, b: 1, a: 1}
   inactiveColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   key: {fileID: 5782889093658994284}

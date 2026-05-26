@@ -1,13 +1,15 @@
+using System;
 using TMPro;
 using UnityEngine;
 
 public class CureSwitcherArea : MonoBehaviour
 {
     [SerializeField] private CureType stationCureType;
+    [SerializeField] private CureTypesClass stationCureTypeClass;
 
     [SerializeField] private SpriteRenderer[] areaVisual;
-    [SerializeField] private Color activeColor = Color.white;
-    [SerializeField] private Color inactiveColor = Color.gray;
+    private Color activeColor = Color.white;
+    private Color inactiveColor = Color.gray;
 
     [SerializeField] private TextMeshPro key;
 
@@ -15,17 +17,52 @@ public class CureSwitcherArea : MonoBehaviour
 
     void Start()
     {
+        SetUpStationsColors();
+        
+        Debug.Log(stationCureType.ToString() + activeColor.ToString() + inactiveColor.ToString());
+
         if (areaVisual != null)
         {
             for (int i = 0; i < areaVisual.Length; i++)
                 areaVisual[i].color = inactiveColor;
+            Debug.Log("InactiveColor: " + inactiveColor);
+        }
+
+
+    }
+
+    private void SetUpStationsColors()
+    {
+        switch (stationCureType)
+        {
+            case CureType.CURE1:
+                activeColor = stationCureTypeClass.activePurple;
+                inactiveColor = stationCureTypeClass.inactivePurple;
+                break;
+
+            case CureType.CURE2:
+                activeColor = stationCureTypeClass.activeRed;
+                inactiveColor = stationCureTypeClass.inactiveRed;
+                break;
+
+            case CureType.CURE4:
+                activeColor = stationCureTypeClass.activeGreen;
+                inactiveColor = stationCureTypeClass.inactiveGreen;
+                break;
+
+            case CureType.CURE3:
+                activeColor = stationCureTypeClass.activeBlue;
+                inactiveColor = stationCureTypeClass.inactiveBlue;
+                break;
+
+            default:
+                break;
+
         }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        //Debug.Log(other.tag);
-
         if (other.CompareTag("Player"))
         {
             currentPlayerInArea = other.GetComponent<PlayerAttack>();
