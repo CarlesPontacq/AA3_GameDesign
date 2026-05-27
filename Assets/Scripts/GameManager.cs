@@ -1,4 +1,3 @@
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.VFX;
@@ -10,6 +9,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private HudManager hudManager;
 
     [SerializeField] private int startingLives;
+
+    [SerializeField] private Camera camera;
+    [SerializeField] private float targetWidth = 4f;
+    [SerializeField] private float targetHeight = 5f;
 
     private int lives;
 
@@ -27,6 +30,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        AdjustAspectRatio();
         lives = startingLives;
         hudManager.SetHealth(lives);
     }
@@ -53,4 +57,38 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    void AdjustAspectRatio()
+    {
+        float targetAspect = targetWidth / targetHeight;
+        float windowAspect = (float)Screen.width / (float)Screen.height;
+
+        float scaleHeight = windowAspect / targetAspect;
+
+        camera = FindAnyObjectByType<Camera>();
+
+        if (scaleHeight < 1.0f)
+        {
+            Rect rect = camera.rect;
+
+            rect.width = 1f;
+            rect.height = scaleHeight;
+            rect.x = 0f;
+            rect.y = (1f - scaleHeight) / 2f;
+
+            camera.rect = rect;
+        }
+        else
+        {
+            float scaleWidth = 1.0f / scaleHeight;
+
+            Rect rect = camera.rect;
+
+            rect.width = scaleWidth;
+            rect.height = 1.0f;
+            rect.x = (1f - scaleWidth) / 2f;
+            rect.y = 0f;
+
+            camera.rect = rect;
+        }
+    }
 }

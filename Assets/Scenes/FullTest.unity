@@ -165,6 +165,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hudManager: {fileID: 1321575159}
   startingLives: 3
+  camera: {fileID: 0}
+  targetWidth: 4
+  targetHeight: 5
 --- !u!1 &156477488
 GameObject:
   m_ObjectHideFlags: 0
@@ -1128,7 +1131,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 29.4, y: 19.26}
+  m_AnchoredPosition: {x: 29.400024, y: 19.26}
   m_SizeDelta: {x: 20, y: 22.8}
   m_Pivot: {x: 0, y: 0}
 --- !u!1 &888007961
