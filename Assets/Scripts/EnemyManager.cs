@@ -45,6 +45,11 @@ public class EnemyManager : MonoBehaviour
             attackTimer = 0f;
             Shoot();
         }
+
+        if(enemies.Count <= 0)
+        {
+            SceneController.Instance.LoadNextScene();
+        }
     }
 
     IEnumerator GameRoutine()

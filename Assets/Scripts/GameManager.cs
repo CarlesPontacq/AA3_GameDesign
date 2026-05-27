@@ -6,11 +6,11 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
 
-    [SerializeField] private HudManager hudManager;
+    private HudManager hudManager;
 
     [SerializeField] private int startingLives;
 
-    [SerializeField] private Camera camera;
+    private Camera camera;
     [SerializeField] private float targetWidth = 4f;
     [SerializeField] private float targetHeight = 5f;
 
@@ -32,6 +32,8 @@ public class GameManager : MonoBehaviour
     {
         AdjustAspectRatio();
         lives = startingLives;
+
+        hudManager = FindAnyObjectByType<HudManager>();
         hudManager.SetHealth(lives);
     }
 
