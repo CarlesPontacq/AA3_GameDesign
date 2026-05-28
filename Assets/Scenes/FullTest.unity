@@ -163,9 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a9bebe5ba8ba0e4298acdcbe7193434, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hudManager: {fileID: 1321575159}
   startingLives: 3
-  camera: {fileID: 0}
   targetWidth: 4
   targetHeight: 5
 --- !u!1 &156477488
@@ -836,6 +834,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abc5e878065901a4a9f68249f6f6c35e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentScene: 0
 --- !u!4 &664696894
 Transform:
   m_ObjectHideFlags: 0
