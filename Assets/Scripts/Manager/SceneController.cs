@@ -5,7 +5,7 @@ public class SceneController : MonoBehaviour
 {
     public static SceneController Instance { get; private set; }
 
-    private int currentScene;
+    public int currentScene;
 
     void Awake()
     {
@@ -33,6 +33,8 @@ public class SceneController : MonoBehaviour
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         Time.timeScale = 1f;
+        Debug.Log($"SCENE LOADED: {scene.name} index={scene.buildIndex}");
+
     }
 
     private void Update()
@@ -43,6 +45,8 @@ public class SceneController : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Alpha9))
         {
+            Debug.Log($"ANTES NEXT: currentScene = {currentScene}");
+
             LoadNextScene();
         }
     }
