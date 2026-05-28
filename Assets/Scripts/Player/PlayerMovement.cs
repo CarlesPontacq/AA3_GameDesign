@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [SerializeField] private Animator animator;
     [SerializeField] private Rigidbody2D rigidbodyRef;
     [SerializeField] private Transform bodyRef;
     [SerializeField] private PlayerInputObserver inputObserver;
@@ -26,7 +27,14 @@ public class PlayerMovement : MonoBehaviour
         realMovementDir.y = 0f;
 
         if (realMovementDir.sqrMagnitude > minMovementMagnitude)
+        {
             realMovementDir = realMovementDir.normalized;
+            animator.SetBool("IsMoving", true);
+        }
+        else
+        {
+            animator.SetBool("IsMoving", false);
+        }
 
         Vector3 velocity = Vector3.zero;
         velocity.x = realMovementDir.x;
