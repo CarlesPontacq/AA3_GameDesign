@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 62ca9e9cad5db9b4782bb34b30c5729c
+guid: 0aa94b68145010f458e42dfa59e3364d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1934808446886008135
-    second: enemyExplosion_0
+      213: 8452357495373299345
+    second: stations_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -97,11 +97,11 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: Android
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: enemyExplosion_0
+      name: stations_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 16
-        height: 16
+        x: 3
+        y: 2
+        width: 26
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 745d0190802d9da10800000000000000
-      internalID: 1934808446886008135
+      spriteID: 19ef55a0c5ecc4570800000000000000
+      internalID: 8452357495373299345
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      enemyExplosion_0: 1934808446886008135
+      stations_0: 8452357495373299345
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

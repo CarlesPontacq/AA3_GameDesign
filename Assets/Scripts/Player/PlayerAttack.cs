@@ -7,11 +7,14 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private Transform shootPoint;
     [SerializeField] private CureType currentCureType;
 
-    [Header("Attack")]
+    [Header("Player Settings")]
     [SerializeField] private float fireRate = 0.3f;
+    [SerializeField] private SpriteRenderer innerPlayerSprite;
+    [SerializeField] private CureTypesClass cureTypeColors;
 
     [Header("Input")]
     [SerializeField] private PlayerInputObserver input;
+
 
     private float timer;
     private bool canAttack = false;
@@ -21,6 +24,8 @@ public class PlayerAttack : MonoBehaviour
     {
         input.onAttack += Shoot;
         input.onChangeCure += OnChangeCureInput;
+
+        innerPlayerSprite.color = cureTypeColors.SetUpPlayerColors(currentCureType);
     }
 
     void Update()
@@ -37,6 +42,9 @@ public class PlayerAttack : MonoBehaviour
     {
         if (cureSwitcherArea != null)
             cureSwitcherArea.TryChangeCure();
+
+        innerPlayerSprite.color = cureTypeColors.SetUpPlayerColors(currentCureType);
+
         Debug.Log("Change cure key pressed" + currentCureType.ToString());
     }
 
@@ -54,4 +62,5 @@ public class PlayerAttack : MonoBehaviour
 
     public void SetCurrentCureType(CureType newtCureType) { currentCureType = newtCureType; }
     public void SetCureSwitchArea(CureSwitcherArea newCureSwitchArea) { cureSwitcherArea = newCureSwitchArea; }
+    public void SetInnerSpriteColor(Color newColor) { innerPlayerSprite.color = newColor; }
 }
