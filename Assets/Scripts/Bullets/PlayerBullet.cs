@@ -13,6 +13,7 @@ public class PlayerBullet : MonoBehaviour
 
     [Header("Collision")]
     private const string playerTag = "Player";
+    private const string enemyTag = "Enemy";
     private const string changeCureArea = "ChangeCureArea";
     
     void Start()
@@ -52,8 +53,12 @@ public class PlayerBullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        if(other.tag == enemyTag) ScoreManager.Instance.AddScore();
+
+
         if (other.tag == playerTag || other.tag == changeCureArea) return;
         
+
         Destroy(gameObject);
     }
 }
