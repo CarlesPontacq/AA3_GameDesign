@@ -79,6 +79,7 @@ public class CureSwitcherArea : MonoBehaviour
         if (currentPlayerInArea != null)
         {
             currentPlayerInArea.SetCurrentCureType(stationCureType);
+            SFXManager.Instance.PlayGlobalSound("GrabCure", 1f);
             Debug.Log($"Cure changed to {stationCureType}");
 
         }

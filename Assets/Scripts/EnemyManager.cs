@@ -221,6 +221,7 @@ public class EnemyManager : MonoBehaviour
             return;
 
         shooter.Shoot(enemyBulletPrefab);
+        SFXManager.Instance.PlayGlobalSound("EnemyShoot", 1f);
     }
 
     Enemy GetBottomEnemy()
