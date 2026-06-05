@@ -702,6 +702,10 @@ PrefabInstance:
       value: 0.78039217
       objectReference: {fileID: 0}
     - target: {fileID: 5384550135166318388, guid: 289347788837f9840b21a33fada14f42, type: 3}
+      propertyPath: stationCureType
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5384550135166318388, guid: 289347788837f9840b21a33fada14f42, type: 3}
       propertyPath: stationCureTypeClass
       value: 
       objectReference: {fileID: 508738206}
@@ -826,6 +830,10 @@ PrefabInstance:
       value: 0.78039217
       objectReference: {fileID: 0}
     - target: {fileID: 5384550135166318388, guid: 289347788837f9840b21a33fada14f42, type: 3}
+      propertyPath: stationCureType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5384550135166318388, guid: 289347788837f9840b21a33fada14f42, type: 3}
       propertyPath: stationCureTypeClass
       value: 
       objectReference: {fileID: 508738206}
@@ -912,7 +920,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66ac149b0a78eae46b4b1f150f3d8ef5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  formation: {fileID: 11400000, guid: 42f5b341c348edc40bbd2ddf9525b619, type: 2}
+  formation: {fileID: 11400000, guid: acf17f6aabd3e7e4685f280af904f961, type: 2}
   startPosition: {x: 0, y: 4}
   cellSize: 0.95
   stepDistance: 0.0625
@@ -953,6 +961,10 @@ PrefabInstance:
     - target: {fileID: 5384550135166318388, guid: 289347788837f9840b21a33fada14f42, type: 3}
       propertyPath: activeColor.r
       value: 0.78039217
+      objectReference: {fileID: 0}
+    - target: {fileID: 5384550135166318388, guid: 289347788837f9840b21a33fada14f42, type: 3}
+      propertyPath: stationCureType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5384550135166318388, guid: 289347788837f9840b21a33fada14f42, type: 3}
       propertyPath: stationCureTypeClass
@@ -1122,6 +1134,10 @@ PrefabInstance:
     - target: {fileID: 5384550135166318388, guid: 289347788837f9840b21a33fada14f42, type: 3}
       propertyPath: inactiveColor.r
       value: 0.42660138
+      objectReference: {fileID: 0}
+    - target: {fileID: 5384550135166318388, guid: 289347788837f9840b21a33fada14f42, type: 3}
+      propertyPath: stationCureType
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5384550135166318388, guid: 289347788837f9840b21a33fada14f42, type: 3}
       propertyPath: stationCureTypeClass
