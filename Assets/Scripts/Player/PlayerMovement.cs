@@ -10,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private PlayerInputObserver inputObserver;
     [SerializeField] private float walkingSpeed;
 
+    [SerializeField] private Vector2 playerPositionLimits;
+
     private float minMovementMagnitude = 0.0001f;
     private float colliderAdjustment = 0.05f;
 
@@ -51,6 +53,10 @@ public class PlayerMovement : MonoBehaviour
         velocity.x = realMovementDir.x;
 
         rigidbodyRef.linearVelocity = velocity * walkingSpeed;
+
+        transform.position = new Vector3(
+            Mathf.Clamp(transform.position.x, playerPositionLimits.x, playerPositionLimits.y),
+            transform.position.y, transform.position.z);
     }
 
     private void UpdatePublicVariables()
