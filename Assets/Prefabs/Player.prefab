@@ -355,6 +355,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cf99ce46655f8e4dabc45e158c39b6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animators:
+  - {fileID: 4934787410651357485}
+  - {fileID: 1477204578303159595}
   projectilePrefab: {fileID: 5319841812172836807, guid: ed1c3b7a702444e488ad6fea3e7d912d, type: 3}
   shootPoint: {fileID: 4304523274963141819}
   currentCureType: 0
@@ -533,3 +536,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af580b784b41a6e4d947505f6ab1dec3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  respawnDelay: 2
+  animators:
+  - {fileID: 4934787410651357485}
+  - {fileID: 1477204578303159595}
+  exteriorSpriteRenderer: {fileID: 2285393700708200169}
+  interiorSpriteRenderer: {fileID: 5974421650288675748}
+  circleCollider: {fileID: 7251627104660001150}
+  movement: {fileID: 4559000070583721090}
+  attack: {fileID: 6248714266416452371}

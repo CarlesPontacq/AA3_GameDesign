@@ -1,7 +1,10 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
+    [SerializeField] private List<Animator> animators;
+
     [Header("Projectile")]
     [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private Transform shootPoint;
@@ -14,6 +17,7 @@ public class PlayerAttack : MonoBehaviour
 
     [Header("Input")]
     [SerializeField] private PlayerInputObserver input;
+
 
 
     private float timer;
@@ -52,6 +56,12 @@ public class PlayerAttack : MonoBehaviour
     {
         if(canAttack)
         {
+            foreach (Animator animator in animators)
+            {
+                if (animator != null)
+                    animator.SetTrigger("Shoot");
+            }
+
             GameObject bullet = Instantiate(projectilePrefab, shootPoint.transform.position, shootPoint.transform.rotation);
 
             bullet.GetComponent<PlayerBullet>().SetCureType(currentCureType);
