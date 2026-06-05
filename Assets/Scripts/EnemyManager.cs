@@ -48,7 +48,7 @@ public class EnemyManager : MonoBehaviour
 
         if(enemies.Count <= 0)
         {
-            //SceneController.Instance.LoadNextScene();
+            SceneController.Instance.LoadNextScene();
         }
     }
 
