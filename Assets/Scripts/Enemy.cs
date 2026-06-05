@@ -72,9 +72,16 @@ public class Enemy : MonoBehaviour
             Debug.Log("Enemigo con weakness " + weakness + " recibe medicina " + cureType);
             if (weakness == CureType.ANY || weakness == cureType)
             {
+                ScoreManager.Instance.AddScore();
+                ScoreManager.Instance.CountBonus();
+
                 Die();
                 Destroy(other.gameObject);
-            } 
+            }
+            else if (weakness != cureType)
+            {
+                ScoreManager.Instance.ResetBonus();
+            }
         }
     }
 }
