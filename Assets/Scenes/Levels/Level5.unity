@@ -915,7 +915,7 @@ MonoBehaviour:
   formation: {fileID: 11400000, guid: 42f5b341c348edc40bbd2ddf9525b619, type: 2}
   startPosition: {x: 0, y: 4}
   cellSize: 0.95
-  stepDistance: 0.0625
+  stepDistance: 0.125
   initialDirection: 1
   hitStopDuration: 0.25
   spawnDelay: 0.01
