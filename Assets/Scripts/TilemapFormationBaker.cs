@@ -2,6 +2,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
+
 public class TilemapFormationBaker : MonoBehaviour
 {
     [Header("Source")]
@@ -27,6 +31,10 @@ public class TilemapFormationBaker : MonoBehaviour
             Debug.LogWarning("Tilemap o Output no asignados");
             return;
         }
+
+#if UNITY_EDITOR
+        Undo.RecordObject(output, "Bake Formation");
+#endif
 
         CleanMappings();
 
@@ -59,6 +67,12 @@ public class TilemapFormationBaker : MonoBehaviour
                 output.grid[index] = type;
             }
         }
+
+#if UNITY_EDITOR
+        EditorUtility.SetDirty(output);
+        AssetDatabase.SaveAssets();
+        AssetDatabase.Refresh();
+#endif
 
         Debug.Log($"Formation baked: {output.width}x{output.height}");
     }

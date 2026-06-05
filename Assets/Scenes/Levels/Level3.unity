@@ -702,7 +702,7 @@ MonoBehaviour:
   formation: {fileID: 11400000, guid: c47e1349d820e0449b64dc37c2445db0, type: 2}
   startPosition: {x: 0, y: 4}
   cellSize: 0.95
-  stepDistance: 0.0625
+  stepDistance: 0.125
   initialDirection: 0
   hitStopDuration: 0.25
   spawnDelay: 0.01
