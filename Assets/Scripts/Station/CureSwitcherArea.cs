@@ -33,32 +33,7 @@ public class CureSwitcherArea : MonoBehaviour
 
     private void SetUpStationsColors()
     {
-        switch (stationCureType)
-        {
-            case CureType.CURE1:
-                activeColor = stationCureTypeClass.activePurple;
-                inactiveColor = stationCureTypeClass.inactivePurple;
-                break;
-
-            case CureType.CURE2:
-                activeColor = stationCureTypeClass.activeRed;
-                inactiveColor = stationCureTypeClass.inactiveRed;
-                break;
-
-            case CureType.CURE4:
-                activeColor = stationCureTypeClass.activeGreen;
-                inactiveColor = stationCureTypeClass.inactiveGreen;
-                break;
-
-            case CureType.CURE3:
-                activeColor = stationCureTypeClass.activeBlue;
-                inactiveColor = stationCureTypeClass.inactiveBlue;
-                break;
-
-            default:
-                break;
-
-        }
+        (activeColor, inactiveColor) = stationCureTypeClass.SetUpStationsColors(stationCureType);
     }
 
     private void OnTriggerEnter2D(Collider2D other)

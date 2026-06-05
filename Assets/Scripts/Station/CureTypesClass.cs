@@ -24,4 +24,67 @@ public class CureTypesClass : MonoBehaviour
     {
         
     }
+
+    public (Color, Color) SetUpStationsColors(CureType stationCureType)
+    {
+        Color activeColor = Color.white;
+        Color inactiveColor = Color.gray;
+
+        switch (stationCureType)
+        {
+        case CureType.CURE1:
+            activeColor = activePurple;
+            inactiveColor = inactivePurple;
+            break;
+
+        case CureType.CURE2:
+            activeColor = activeRed;
+            inactiveColor = inactiveRed;
+            break;
+
+        case CureType.CURE4:
+            activeColor = activeGreen;
+            inactiveColor = inactiveGreen;
+            break;
+
+        case CureType.CURE3:
+            activeColor = activeBlue;
+            inactiveColor = inactiveBlue;
+            break;
+
+        default:
+            break;
+        }
+
+        return (activeColor, inactiveColor);    
+    }
+
+    public Color SetUpPlayerColors(CureType stationCureType)
+    {
+        Color activeColor = Color.white;
+
+        switch (stationCureType)
+        {
+            case CureType.CURE1:
+                activeColor = activePurple;
+                break;
+
+            case CureType.CURE2:
+                activeColor = activeRed;
+                break;
+
+            case CureType.CURE4:
+                activeColor = activeGreen;
+                break;
+
+            case CureType.CURE3:
+                activeColor = activeBlue;
+                break;
+
+            default:
+                break;
+        }
+
+        return activeColor;
+    }
 }

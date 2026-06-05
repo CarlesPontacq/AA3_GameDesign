@@ -1,8 +1,10 @@
+
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private Animator animator;
+    [SerializeField] private List<Animator> animators;
     [SerializeField] private Rigidbody2D rigidbodyRef;
     [SerializeField] private Transform bodyRef;
     [SerializeField] private PlayerInputObserver inputObserver;
@@ -29,13 +31,20 @@ public class PlayerMovement : MonoBehaviour
         if (realMovementDir.sqrMagnitude > minMovementMagnitude)
         {
             realMovementDir = realMovementDir.normalized;
-            if(animator != null)
-                animator.SetBool("IsMoving", true);
+            foreach(Animator animator in animators)
+            {
+                if (animator != null)
+                    animator.SetBool("IsMoving", true);
+            }
+
         }
         else
         {
-            if (animator != null)
-                animator.SetBool("IsMoving", false);
+            foreach (Animator animator in animators)
+            {
+                if (animator != null)
+                    animator.SetBool("IsMoving", false);
+            }
         }
 
         Vector3 velocity = Vector3.zero;
