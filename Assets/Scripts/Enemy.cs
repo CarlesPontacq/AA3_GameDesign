@@ -72,13 +72,17 @@ public class Enemy : MonoBehaviour
             Debug.Log("Enemigo con weakness " + weakness + " recibe medicina " + cureType);
             if (weakness == CureType.ANY || weakness == cureType)
             {
+                ScoreManager.Instance.AddScore();
+                ScoreManager.Instance.CountBonus();
+
                 SFXManager.Instance.PlayGlobalSound("EnemyHit", 1f);
 
                 Die();
                 Destroy(other.gameObject);
             }
-            else
+            else if (weakness != cureType)
             {
+                ScoreManager.Instance.ResetBonus();
                 SFXManager.Instance.PlayGlobalSound("WrongBullet", 1f);
             }
         }

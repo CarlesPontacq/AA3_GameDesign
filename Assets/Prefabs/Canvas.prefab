@@ -598,6 +598,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 2617706126880427388}
+  highScoreText: {fileID: 1171812944535465298}
   healthText: {fileID: 766564675044521103}
 --- !u!1 &3767154393917447736
 GameObject:
