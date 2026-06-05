@@ -29,11 +29,13 @@ public class PlayerMovement : MonoBehaviour
         if (realMovementDir.sqrMagnitude > minMovementMagnitude)
         {
             realMovementDir = realMovementDir.normalized;
-            animator.SetBool("IsMoving", true);
+            if(animator != null)
+                animator.SetBool("IsMoving", true);
         }
         else
         {
-            animator.SetBool("IsMoving", false);
+            if (animator != null)
+                animator.SetBool("IsMoving", false);
         }
 
         Vector3 velocity = Vector3.zero;
