@@ -67,4 +67,10 @@ public class PlayerMovement : MonoBehaviour
 
         IsMoving = currentSpeed > 0.01f;
     }
+
+    private void OnDisable()
+    {
+        IsMoving = false;
+        rigidbodyRef.linearVelocity = Vector3.zero;
+    }
 }
