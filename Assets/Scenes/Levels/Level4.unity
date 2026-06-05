@@ -360,7 +360,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5384550135166318388, guid: 289347788837f9840b21a33fada14f42, type: 3}
       propertyPath: stationCureType
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5384550135166318388, guid: 289347788837f9840b21a33fada14f42, type: 3}
       propertyPath: stationCureTypeClass
@@ -577,7 +577,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66ac149b0a78eae46b4b1f150f3d8ef5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  formation: {fileID: 11400000, guid: acf17f6aabd3e7e4685f280af904f961, type: 2}
+  formation: {fileID: 11400000, guid: 85a6953f42c4244479f8e361a7bab64e, type: 2}
   startPosition: {x: 0, y: 2.5}
   cellSize: 0.95
   stepDistance: 0.125
@@ -621,7 +621,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5384550135166318388, guid: 289347788837f9840b21a33fada14f42, type: 3}
       propertyPath: stationCureType
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5384550135166318388, guid: 289347788837f9840b21a33fada14f42, type: 3}
       propertyPath: stationCureTypeClass
@@ -681,7 +681,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9049365375311670859, guid: 289347788837f9840b21a33fada14f42, type: 3}
   m_PrefabInstance: {fileID: 1927441230}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1989382658
+--- !u!1001 &1970782834
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -735,7 +735,7 @@ PrefabInstance:
       objectReference: {fileID: 508738206}
     - target: {fileID: 6248714266416452371, guid: bb8ff9db362a2104080f085b20b2e8b8, type: 3}
       propertyPath: currentCureType
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6380539530198164051, guid: bb8ff9db362a2104080f085b20b2e8b8, type: 3}
       propertyPath: m_Name
@@ -1221,4 +1221,4 @@ SceneRoots:
   - {fileID: 619394802}
   - {fileID: 722815984}
   - {fileID: 2138286695}
-  - {fileID: 1989382658}
+  - {fileID: 1970782834}

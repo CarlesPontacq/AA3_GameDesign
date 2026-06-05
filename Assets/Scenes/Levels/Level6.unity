@@ -360,7 +360,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5384550135166318388, guid: 289347788837f9840b21a33fada14f42, type: 3}
       propertyPath: stationCureType
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5384550135166318388, guid: 289347788837f9840b21a33fada14f42, type: 3}
       propertyPath: stationCureTypeClass
@@ -577,11 +577,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66ac149b0a78eae46b4b1f150f3d8ef5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  formation: {fileID: 11400000, guid: e9d6f515311aac34eac19b618b1b6e70, type: 2}
+  formation: {fileID: 11400000, guid: 42f5b341c348edc40bbd2ddf9525b619, type: 2}
   startPosition: {x: 0, y: 2.5}
   cellSize: 0.95
-  stepDistance: 0.125
-  initialDirection: 1
+  stepDistance: 0.0625
+  initialDirection: 0
   hitStopDuration: 0.25
   spawnDelay: 0.01
   delayBetweenEnemies: 0.006
@@ -621,7 +621,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5384550135166318388, guid: 289347788837f9840b21a33fada14f42, type: 3}
       propertyPath: stationCureType
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5384550135166318388, guid: 289347788837f9840b21a33fada14f42, type: 3}
       propertyPath: stationCureTypeClass
@@ -681,7 +681,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9049365375311670859, guid: 289347788837f9840b21a33fada14f42, type: 3}
   m_PrefabInstance: {fileID: 1927441230}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1970782834
+--- !u!1001 &1989382658
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -735,7 +735,7 @@ PrefabInstance:
       objectReference: {fileID: 508738206}
     - target: {fileID: 6248714266416452371, guid: bb8ff9db362a2104080f085b20b2e8b8, type: 3}
       propertyPath: currentCureType
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6380539530198164051, guid: bb8ff9db362a2104080f085b20b2e8b8, type: 3}
       propertyPath: m_Name
@@ -1221,4 +1221,4 @@ SceneRoots:
   - {fileID: 619394802}
   - {fileID: 722815984}
   - {fileID: 2138286695}
-  - {fileID: 1970782834}
+  - {fileID: 1989382658}
