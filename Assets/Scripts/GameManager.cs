@@ -39,7 +39,10 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 
     private void PlayerDied()
@@ -55,6 +58,8 @@ public class GameManager : MonoBehaviour
 
         if (lives <= 0)
         {
+            PlayerPrefs.SetFloat("HighScore", ScoreManager.Instance.GetHighScore());
+            ScoreManager.Instance.ResetScore();
             PlayerDied();
         }
     }

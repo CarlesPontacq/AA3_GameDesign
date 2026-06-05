@@ -25,7 +25,7 @@ public class ScoreManager : MonoBehaviour
 
     void Start()
     {
-        
+        highScore = PlayerPrefs.GetFloat("HighScore", highScore);
     }
 
     void Update()
@@ -39,6 +39,11 @@ public class ScoreManager : MonoBehaviour
     public void AddScore()
     {
         score = score + (addScore + (addScore * bonusModifier * bonus));
+    }
+
+    public void ResetScore()
+    {
+        score = 0;
     }
 
     public void CountBonus()

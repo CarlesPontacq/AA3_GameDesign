@@ -48,6 +48,7 @@ public class EnemyManager : MonoBehaviour
 
         if(enemies.Count <= 0)
         {
+            PlayerPrefs.SetFloat("HighScore", ScoreManager.Instance.GetHighScore());
             SceneController.Instance.LoadNextScene();
         }
     }
