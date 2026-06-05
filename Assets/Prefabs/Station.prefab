@@ -855,6 +855,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stationCureType: 0
+  stationCureTypeClass: {fileID: 0}
   areaVisual:
   - {fileID: 8259072915412392183}
   - {fileID: 5104334015748305510}
@@ -936,8 +937,6 @@ MonoBehaviour:
   - {fileID: 401838525356801521}
   - {fileID: 8109262232020232431}
   - {fileID: 5734179058393564859}
-  activeColor: {r: 1, g: 1, b: 1, a: 1}
-  inactiveColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   key: {fileID: 5782889093658994284}
 --- !u!1 &241377885658755518
 GameObject:
@@ -43337,7 +43336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbd3173f9f5aba348890f6e7d70ba4da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyRadius: 0.05
+  destroyRadius: 0.1
   blocks:
   - {fileID: 6130072608825845502}
   - {fileID: 350827172470283772}
