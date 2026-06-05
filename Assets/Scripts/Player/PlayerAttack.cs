@@ -62,6 +62,8 @@ public class PlayerAttack : MonoBehaviour
                     animator.SetTrigger("Shoot");
             }
 
+            SFXManager.Instance.PlayGlobalSound("PlayerShoot", 1f);
+
             GameObject bullet = Instantiate(projectilePrefab, shootPoint.transform.position, shootPoint.transform.rotation);
 
             bullet.GetComponent<PlayerBullet>().SetCureType(currentCureType);

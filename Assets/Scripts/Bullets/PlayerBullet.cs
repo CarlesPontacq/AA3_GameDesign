@@ -14,6 +14,7 @@ public class PlayerBullet : MonoBehaviour
     [Header("Collision")]
     private const string playerTag = "Player";
     private const string enemyTag = "Enemy";
+    private const string enemyBulletTag = "EnemyBullet";
     private const string changeCureArea = "ChangeCureArea";
     
     void Start()
@@ -57,7 +58,8 @@ public class PlayerBullet : MonoBehaviour
 
 
         if (other.tag == playerTag || other.tag == changeCureArea) return;
-        
+
+        if (other.tag == enemyBulletTag) SFXManager.Instance.PlayGlobalSound("BulletExplosion", 1f);
 
         Destroy(gameObject);
     }

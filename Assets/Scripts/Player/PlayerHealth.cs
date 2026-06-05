@@ -30,6 +30,7 @@ public class PlayerHealth : MonoBehaviour
         if (other.CompareTag(enemyBulletTag))
         {
             Destroy(other.gameObject);
+            SFXManager.Instance.PlayGlobalSound("PlayerDeath", 1f);
             StartCoroutine(DieCoroutine());
         }
     }

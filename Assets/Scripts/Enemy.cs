@@ -75,12 +75,15 @@ public class Enemy : MonoBehaviour
                 ScoreManager.Instance.AddScore();
                 ScoreManager.Instance.CountBonus();
 
+                SFXManager.Instance.PlayGlobalSound("EnemyHit", 1f);
+
                 Die();
                 Destroy(other.gameObject);
             }
             else if (weakness != cureType)
             {
                 ScoreManager.Instance.ResetBonus();
+                SFXManager.Instance.PlayGlobalSound("WrongBullet", 1f);
             }
         }
     }
